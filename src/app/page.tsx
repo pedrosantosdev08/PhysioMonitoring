@@ -1,0 +1,72 @@
+import { Header } from "../components/Header";
+
+export default function Home() {
+  return (
+    <div className="bg-[#0D1F27] min-h-screen font-sans">
+      <Header />
+
+      <main className="relative flex flex-col items-center justify-center text-center text-white px-6 py-24 overflow-hidden">
+
+        {/* Grid de fundo sutil */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(47,179,173,0.04) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(47,179,173,0.04) 1px, transparent 1px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        {/* Badge */}
+        <div className="relative inline-flex items-center gap-2 border border-[#2FB3AD]/40 text-[#2FB3AD] text-xs font-medium px-4 py-1.5 rounded-full mb-8 tracking-wide">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#2FB3AD]" />
+          Plataforma de Fisioterapia Digital
+        </div>
+
+        {/* Título */}
+        <h1 className="relative font-serif text-5xl md:text-6xl font-normal leading-[1.1] max-w-2xl mb-5">
+          Transforme sua{" "}
+          <em className="text-[#2FB3AD] italic not-italic">prática</em>{" "}
+          clínica em resultados
+        </h1>
+
+        {/* Subtítulo */}
+        <p className="relative text-white/40 text-base md:text-lg font-light max-w-md leading-relaxed mb-10">
+          Gerencie pacientes, acompanhe evoluções e entregue planos
+          terapêuticos personalizados em uma única plataforma.
+        </p>
+
+        {/* Botões */}
+        <div className="relative flex gap-3">
+          <button className="bg-[#2FB3AD] text-[#0D1F27] text-sm font-medium px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+            Acessar Painel →
+          </button>
+          <button className="bg-transparent border border-white/15 text-white/70 text-sm font-normal px-6 py-3 rounded-lg hover:border-white/30 hover:text-white transition-all">
+            Área do Paciente
+          </button>
+        </div>
+      </main>
+
+      {/* Stats bar */}
+      <div className="grid grid-cols-3 border-t border-white/[0.07]">
+        {[
+          { num: "+2.4k", label: "Pacientes ativos" },
+          { num: "98%",   label: "Satisfação clínica" },
+          { num: "+150",  label: "Fisioterapeutas" },
+        ].map((s, i) => (
+          <div
+            key={i}
+            className={`py-6 text-center ${i < 2 ? "border-r border-white/[0.07]" : ""}`}
+          >
+            <div className="font-serif text-3xl text-white font-normal">
+              <span className="text-[#2FB3AD]">{s.num}</span>
+            </div>
+            <div className="text-[11px] text-white/35 mt-1 tracking-wide">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
