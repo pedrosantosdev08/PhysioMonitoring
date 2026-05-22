@@ -10,16 +10,17 @@ interface MenuMobileProps {
 export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
   return (
     <>
-      {/* Overlay escuro atrás do menu */}
+      {/* Overlay escuro - Ajustado para z-[45] */}
       {isOpen && (
         <div
           onClick={onClose}
-          className="fixed inset-0 bg-black/50 z-40"
+          className="fixed inset-0 bg-black/50 z-[45]"
         />
       )}
 
+      {/* Nav corrigido - Mudado de z-60 para z-[50] com colchetes */}
       <nav
-        className={`fixed top-0 right-0 h-full w-[70%] max-w-xs bg-[#12222B] text-white z-50
+        className={`fixed top-0 right-0 h-full w-[70%] max-w-xs bg-[#12222B] text-white z-[50]
           flex flex-col justify-between py-10 px-6 shadow-2xl
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}
@@ -33,7 +34,7 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
             </span>
             <button
               onClick={onClose}
-              className="text-white hover:text-[#2FB3AD] transition-colors"
+              className="text-white hover:text-[#2FB3AD] transition-colors p-2"
             >
               <FontAwesomeIcon icon={faXmark} size="xl" />
             </button>
@@ -43,7 +44,7 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
           <ul className="flex flex-col gap-2">
             <li>
               <Link
-                href="/"
+                href="/login"
                 onClick={onClose}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium
                   hover:bg-[#2FB3AD]/20 hover:text-[#2FB3AD] transition-all duration-200"
@@ -53,7 +54,7 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
             </li>
             <li>
               <Link
-                href="/"
+                href="/register"
                 onClick={onClose}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium
                   hover:bg-[#2FB3AD]/20 hover:text-[#2FB3AD] transition-all duration-200"
