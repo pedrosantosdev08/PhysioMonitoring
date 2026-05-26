@@ -26,3 +26,26 @@ export const CardData = [
         description: "Crie relatórios customizados com base nos dados dos pacientes"
     },
 ]
+
+export const InfoCardData = [
+    {
+        id:1,
+        title: "Pacientes ativos",
+        infoNumber: "1.4k+"
+    },
+    {
+        id:2,
+        title: "Sessões Hoje",
+        infoNumber: "8"
+    },
+    {
+        id:3,
+        title: "Altas este Mês",
+        infoNumber: "123"
+    },
+    {
+        id:4,
+        title: "Satisfação",
+        infoNumber: "96%"
+    }
+]
