@@ -1,13 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  /* --bg-color: #0D1F27;
-  --accent-color: #2FB3AD; */
-
-  --bg-color: ##eff5f7;
-  --bg-card: #0D1F27;
   --accent-color: #2fb3ad;
-  --text-light: #ffffff/70;
-  --text-dark: #000000/90;
-  --text-description: #1D323E;
+}
+
+/* Tema escuro — padrão */
+:root {
+  --bg-primary: #0d1f27;
+  --bg-secondary: #12222B;
+  --bg-card: #111827;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.70);
+  --text-description: #a3b8c2;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Tema claro */
+.light {
+  --bg-primary: #dde6ea;       /* fundo principal — cinza azulado médio */
+  --bg-secondary: #ccd8dd;     /* fundo secundário — um tom abaixo */
+  --bg-card: #e8f0f3;          /* cards — levemente mais claro que o fundo */
+  --text-primary: #1a2e38;     /* texto principal — azul escuro */
+  --text-secondary: rgba(26, 46, 56, 0.65); /* texto secundário */
+  --text-description: #2d4a57; /* descrições — tom médio */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Sombras globais nos cards */
+* {
+  box-sizing: border-box;
 }

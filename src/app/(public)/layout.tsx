@@ -1,5 +1,4 @@
-
-export default function PrivateLayout({
+export default function PublicLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -14,8 +13,8 @@ export default function PrivateLayout({
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(47,179,173,0.10) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(47,179,173,0.10) 1px, transparent 1px)
+            linear-gradient(color-mix(in srgb, var(--accent-color) 12%, transparent) 1px, transparent 1px),
+            linear-gradient(90deg, color-mix(in srgb, var(--accent-color) 12%, transparent) 1px, transparent 1px)
           `,
           backgroundSize: "40px 40px",
         }}

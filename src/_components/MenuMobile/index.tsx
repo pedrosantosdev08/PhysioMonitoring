@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 
 interface MenuMobileProps {
   isOpen: boolean;
@@ -17,6 +18,7 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
           className="fixed inset-0 bg-black/50 z-40"
         />
       )}
+      
 
       <nav
         className={`fixed top-0 right-0 h-full w-[70%] max-w-xs bg-[#12222B] text-white z-60
@@ -62,10 +64,12 @@ export function MenuMobile({ isOpen, onClose }: MenuMobileProps) {
               </Link>
             </li>
           </ul>
+
         </div>
 
         {/* Rodapé do menu */}
-        <div className="border-t border-white/10 pt-6">
+        <div className="flex items-center justify-between border-t border-white/10 pt-6">
+        <ThemeToggle />
           <p className="text-xs text-white/40 text-center">
             © 2024 PhysioMonitoring
           </p>
