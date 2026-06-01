@@ -1,9 +1,13 @@
 
+
 export default function PrivateLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+   
+
   return (
     <div
       className="relative min-h-screen flex flex-col"

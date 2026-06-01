@@ -43,7 +43,7 @@ export function FormMedicalRecord() {
             <legend className="sr-only">Informações pessoais</legend>
 
             <div className="sm:col-span-2 flex flex-col gap-1">
-              <label htmlFor="fullName" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="fullName" className="text-[13px] font-medium text-(--text-secondary)">
                 Nome completo
               </label>
               <input
@@ -59,7 +59,7 @@ export function FormMedicalRecord() {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="age" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="age" className="text-[13px] font-medium text-(--text-secondary)">
                 Idade
               </label>
               <input
@@ -76,7 +76,7 @@ export function FormMedicalRecord() {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="phone" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="phone" className="text-[13px] font-medium text-(--text-secondary)">
                 Telefone
               </label>
               <input
@@ -88,13 +88,13 @@ export function FormMedicalRecord() {
                 placeholder="(00) 00000-0000"
                 className={inputClass}
               />
-              <span id="phone-hint" className="text-[12px] text-[var(--text-description)]">
+              <span id="phone-hint" className="text-[12px] text-(--text-description)">
                 Inclua o DDD
               </span>
             </div>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="email" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="email" className="text-[13px] font-medium text-(--text-secondary)">
                 E-mail
               </label>
               <input
@@ -108,7 +108,7 @@ export function FormMedicalRecord() {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="occupation" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="occupation" className="text-[13px] font-medium text-(--text-secondary)">
                 Profissão
               </label>
               <input
@@ -122,7 +122,7 @@ export function FormMedicalRecord() {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="status" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="status" className="text-[13px] font-medium text-(--text-secondary)">
                 Status
               </label>
               <select
@@ -145,7 +145,7 @@ export function FormMedicalRecord() {
           className="rounded-xl p-7 mb-4 "
           style={{ background: "var(--bg-card)" }}
         >
-          <p className="text-[11px] font-medium uppercase tracking-widest text-[var(--text-secondary)] mb-5 pb-3 border-b ">
+          <p className="text-[11px] font-medium uppercase tracking-widest text-(--text-secondary) mb-5 pb-3 border-b ">
             Diagnóstico &amp; anamnese
           </p>
 
@@ -153,7 +153,7 @@ export function FormMedicalRecord() {
             <legend className="sr-only">Informações clínicas</legend>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="diagnosis" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="diagnosis" className="text-[13px] font-medium text-(--text-secondary)">
                 Diagnóstico
               </label>
               <input
@@ -166,7 +166,7 @@ export function FormMedicalRecord() {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label htmlFor="cid10" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="cid10" className="text-[13px] font-medium text-(--text-secondary)">
                 CID-10
               </label>
               <input
@@ -178,13 +178,13 @@ export function FormMedicalRecord() {
                 placeholder="Ex: M54.5"
                 className={inputClass}
               />
-              <span id="cid10-hint" className="text-[12px] text-[var(--text-description)]">
+              <span id="cid10-hint" className="text-[12px] text-(--text-description)">
                 Classificação Internacional de Doenças
               </span>
             </div>
 
             <div className="sm:col-span-2 flex flex-col gap-1">
-              <label htmlFor="history" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="history" className="text-[13px] font-medium text-(--text-secondary)">
                 Histórico e queixa principal
               </label>
               <textarea
@@ -192,13 +192,13 @@ export function FormMedicalRecord() {
                 name="history"
                 rows={4}
                 placeholder="Descreva o histórico clínico e a queixa principal do paciente"
-                className={inputClass + " resize-y min-h-[80px] leading-relaxed"}
+                className={inputClass + " resize-y min-h-20 leading-relaxed"}
               />
             </div>
 
             {/* EVA */}
             <div className="sm:col-span-2 flex flex-col gap-1">
-              <label htmlFor="scale" className="text-[13px] font-medium text-[var(--text-secondary)]">
+              <label htmlFor="scale" className="text-[13px] font-medium text-(--text-secondary)">
                 Escala visual analógica de dor (EVA)
               </label>
               <div className="flex items-center gap-3">
@@ -215,11 +215,11 @@ export function FormMedicalRecord() {
                   aria-valuenow={evaValue}
                   aria-valuetext={`${evaValue} — ${evaValue === 0 ? "Sem dor" : evaValue === 10 ? "Dor máxima" : "Dor moderada"}`}
                   onChange={(e) => setEvaValue(Number(e.target.value))}
-                  className="flex-1 h-1 accent-[var(--accent-color)]"
+                  className="flex-1 h-1 accent-(--accent-color)"
                 />
                 <output
                   htmlFor="scale"
-                  className="min-w-[32px] text-center text-sm font-medium rounded-md px-2 py-0.5"
+                  className="min-w-8 text-center text-sm font-medium rounded-md px-2 py-0.5"
                   style={{
                     color: "var(--accent-color)",
                     background: "color-mix(in srgb, var(--accent-color) 15%, transparent)",
@@ -228,7 +228,7 @@ export function FormMedicalRecord() {
                   {evaValue}
                 </output>
               </div>
-              <div className="flex justify-between text-[12px] text-[var(--text-description)] mt-1">
+              <div className="flex justify-between text-[12px] text-(--text-description) mt-1">
                 <span>0 — Sem dor</span>
                 <span>10 — Dor máxima</span>
               </div>
@@ -240,7 +240,7 @@ export function FormMedicalRecord() {
         <div className="flex justify-end gap-3 mt-6">
           <button
             type="button"
-            className="px-5 py-2 text-sm rounded-lg border  text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] transition cursor-pointer"
+            className="px-5 py-2 text-sm rounded-lg border  text-(--text-secondary) hover:bg-(--bg-secondary) transition cursor-pointer"
           >
             Cancelar
           </button>

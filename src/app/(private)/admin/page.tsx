@@ -4,14 +4,17 @@ import { PatientList } from "@/src/_components/PatientList";
 import { TodaySchedule } from "@/src/_components/TodaySchedule";
 import { ThemeToggle } from "@/src/_components/ThemeToggle/ThemeToggle";
 import { InfoCardData } from "@/src/utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons/faArrowRightFromBracket";
 import { ButtonLogOut } from "@/src/_components/ButtonLogOut";
+import { Metadata } from "next";
 
 const user = {
   name: "Pedro",
   specialty: "Fisioterapeuta Esportivo",
 };
+
+export const metadata: Metadata = {
+  title: "Painel Administrativo - Fisio Monitoring"
+}
 
 export default function AdminPage() {
   return (

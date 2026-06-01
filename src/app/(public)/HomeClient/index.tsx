@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { Header } from "@/src/_components/Header";
-import { CardData } from "@/src/utils";
+import { HomeCardData } from "@/src/utils";
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -198,7 +198,7 @@ export function HomeClient() {
         variants={containerVariants}
         className="grid grid-cols-1 md:grid-cols-4 gap-6 py-12 px-4 max-w-6xl mx-auto"
       >
-        {CardData.map((card) => (
+        {HomeCardData.map((card) => (
           <motion.div
             key={card.id}
             variants={itemVariants}

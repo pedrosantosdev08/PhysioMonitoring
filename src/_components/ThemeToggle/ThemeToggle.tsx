@@ -28,7 +28,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg border border-gray-600 text-gray-400 hover:text-white hover:border-gray-400 transition-colors cursor-pointer"
+      className="p-2 rounded-lg border border-gray-600 text-gray-400 hover:text-white hover:border-gray-400 transition-colors duration-300 ease-in-out cursor-pointer"
       aria-label="Alternar tema"
     >
       <FontAwesomeIcon

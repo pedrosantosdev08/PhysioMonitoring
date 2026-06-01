@@ -1,6 +1,6 @@
 import { faArrowTrendUp, faChartColumn, faLaptopMedical, faMobile } from "@fortawesome/free-solid-svg-icons";
 
-export const CardData = [
+export const HomeCardData = [
     {
         id:1,
         icon: faLaptopMedical,
@@ -48,4 +48,31 @@ export const InfoCardData = [
         title: "Satisfação",
         infoNumber: "96%"
     }
+]
+
+export const PatientPerformanceCard = [
+    {
+    id:1,
+    title: "Protocolo",
+    performance: 50,
+    color: "#2DBFB0",
+    
+},{
+    id:2,
+    title: "Exercícios",
+    performance: 40,
+    color: "#10B981",
+},
+{
+    id:3,
+    title: "Dor(EVA)",
+    performance: 30,
+    color: "#7C3AED",
+},
+{
+    id:4,
+    title: "Adesão",
+    performance: 70,
+    color: "#F59E0B",
+}
 ]

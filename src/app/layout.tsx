@@ -3,6 +3,10 @@ import { ThemeProvider } from "@/src/lib/providers/theme-provider";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: {
@@ -24,7 +28,7 @@ export default async function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${theme} antialiased`}
+      className={cn("antialiased", theme, "font-sans", geist.variable)}
       suppressHydrationWarning
     >
       <body
