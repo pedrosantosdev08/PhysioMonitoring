@@ -11,7 +11,8 @@ export function FormMedicalRecord() {
   const [evaValue, setEvaValue] = useState(0);
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-10 text-base leading-relaxed bg-(--bg-card) rounded-xl">
+    <main className="max-w-2xl mx-auto px-4 py-10 text-base leading-relaxed bg-(--bg-card) rounded-xl"
+    style={{ background: "var(--bg-card)", boxShadow: "var(--shadow-md)" }}>
 
       {/* Cabeçalho */}
       <header className="mb-10 px-7">

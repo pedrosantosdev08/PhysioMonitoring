@@ -1,3 +1,6 @@
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 type PatientStatus = "Ativo" | "Pendente" | "Inativo";
 
 interface Patient {
@@ -8,17 +11,56 @@ interface Patient {
   avatarColor: string;
 }
 
-const statusConfig: Record<PatientStatus, { dot: string; badge: string; text: string }> = {
-  Ativo:    { dot: "bg-emerald-400", badge: "bg-emerald-900/60 text-emerald-400",  text: "Ativo"    },
-  Pendente: { dot: "bg-amber-400",   badge: "bg-amber-900/60   text-amber-400",    text: "Pendente" },
-  Inativo:  { dot: "bg-gray-500",    badge: "bg-gray-700/60    text-gray-400",     text: "Inativo"  },
+const statusConfig: Record<
+  PatientStatus,
+  { dot: string; badge: string; text: string }
+> = {
+  Ativo: {
+    dot: "bg-emerald-400",
+    badge: "bg-emerald-900/60 text-emerald-400",
+    text: "Ativo",
+  },
+  Pendente: {
+    dot: "bg-amber-400",
+    badge: "bg-amber-900/60   text-amber-400",
+    text: "Pendente",
+  },
+  Inativo: {
+    dot: "bg-gray-500",
+    badge: "bg-gray-700/60    text-gray-400",
+    text: "Inativo",
+  },
 };
 
 const patients: Patient[] = [
-  { id: 1, name: "Maria Silva",    age: 45, status: "Ativo",    avatarColor: "bg-teal-500"   },
-  { id: 2, name: "João Santos",    age: 62, status: "Pendente", avatarColor: "bg-purple-500" },
-  { id: 3, name: "Ana Costa",      age: 38, status: "Ativo",    avatarColor: "bg-teal-600"   },
-  { id: 4, name: "Pedro Oliveira", age: 55, status: "Inativo",  avatarColor: "bg-amber-500"  },
+  {
+    id: 1,
+    name: "Maria Silva",
+    age: 45,
+    status: "Ativo",
+    avatarColor: "bg-teal-500",
+  },
+  {
+    id: 2,
+    name: "João Santos",
+    age: 62,
+    status: "Pendente",
+    avatarColor: "bg-purple-500",
+  },
+  {
+    id: 3,
+    name: "Ana Costa",
+    age: 38,
+    status: "Ativo",
+    avatarColor: "bg-teal-600",
+  },
+  {
+    id: 4,
+    name: "Pedro Oliveira",
+    age: 55,
+    status: "Inativo",
+    avatarColor: "bg-amber-500",
+  },
 ];
 
 function getInitials(name: string) {
@@ -28,23 +70,26 @@ function getInitials(name: string) {
 export function PatientList() {
   return (
     <section
-      className="rounded-2xl p-5 border border-[var(--border-color)] w-full"
+      className="rounded-2xl p-5 border border-(--border-color) w-full"
       style={{ background: "var(--bg-card)", boxShadow: "var(--shadow-md)" }}
       aria-labelledby="patients-heading"
     >
-      <header className="flex items-center gap-2 mb-5">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-        <h2 id="patients-heading" className="text-base font-semibold text-[var(--text-primary)]">
-          Pacientes
-        </h2>
+      <header className="flex items-center gap-2 mb-5 justify-between">
+        <div className="flex items-center gap-2">
+          <FontAwesomeIcon icon={faUsers} className="text-(--accent-color)"/>
+          <h2
+            id="patients-heading"
+            className="text-base font-semibold text-(--text-primary)"
+          >
+            Pacientes
+          </h2>
+        </div>
+        <button className="text-(--accent-color) cursor-pointer hover:underline">
+          Listar
+        </button>
       </header>
 
-      <ul className="flex flex-col divide-y divide-[var(--border-color)]">
+      <ul className="flex flex-col divide-y divide-(--border-color)">
         {patients.map((p) => {
           const cfg = statusConfig[p.status];
           return (
@@ -64,7 +109,7 @@ export function PatientList() {
                 {/* Info */}
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm font-semibold text-[var(--text-primary)] leading-none">
+                    <span className="text-sm font-semibold text-(--text-primary) leading-none">
                       {p.name}
                     </span>
                     <span
@@ -72,7 +117,7 @@ export function PatientList() {
                       aria-label={`Status: ${p.status}`}
                     />
                   </div>
-                  <span className="text-xs text-[var(--text-description)] mt-0.5 block">
+                  <span className="text-xs text-(--text-description) mt-0.5 block">
                     {p.age} anos
                   </span>
                 </div>

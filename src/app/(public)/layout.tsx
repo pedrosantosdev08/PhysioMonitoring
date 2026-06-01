@@ -1,3 +1,5 @@
+import { Header } from "@/src/_components/Header";
+
 export default function PublicLayout({
   children,
 }: {
@@ -22,6 +24,7 @@ export default function PublicLayout({
 
       {/* Conteúdo */}
       <div className="relative flex flex-col flex-1">
+        <Header/>
         {children}
       </div>
     </div>
