@@ -11,14 +11,14 @@ export function FormMedicalRecord() {
   const [evaValue, setEvaValue] = useState(0);
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-10 text-base leading-relaxed text-(--text-primary)">
+    <main className="max-w-2xl mx-auto px-4 py-10 text-base leading-relaxed bg-(--bg-card) rounded-xl">
 
       {/* Cabeçalho */}
       <header className="mb-10 px-7">
-        <h1 className="text-xl font-medium text-(--text-primary) mb-1">
+        <h1 className="text-2xl font-medium text-(--text-primary) mb-1">
           Consultório Virtual
         </h1>
-        <p className="text-sm text-(--text-description)">
+        <p className="text-md text-(--text-description)">
           Preencha os dados abaixo para registrar o prontuário do paciente.
         </p>
       </header>
